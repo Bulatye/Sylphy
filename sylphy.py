@@ -10,7 +10,6 @@ def main():
     # Parse arguments
     parser.add_argument('artist', type=str)
     parser.add_argument('song', type=str)
-    parser.add_argument('-ot','--origtrans', action='store', help='Get the original text and its translation')
     parser.add_argument('-o', '--original', action='store_true', help='Get only original text')
     parser.add_argument('-t', '--translate', action='store_true', help='Get only translate text')
     args = parser.parse_args()
