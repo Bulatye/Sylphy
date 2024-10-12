@@ -1,6 +1,5 @@
 # Sylphy
 
-#### Sylphy is a script for getting lyrics with Russian translation and more.
 #### This script fetches song lyrics and their translations in russian from [Amalgama Lab](https://www.amalgama-lab.com/).
 
 ## Installation
