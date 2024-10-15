@@ -6,10 +6,6 @@ from bs4 import BeautifulSoup
 import re
     
 def main():
-    # ANSI escape code для серого цвета
-    GRAY = '\033[90m'
-    # ANSI escape code для сброса цвета
-    RESET = '\033[0m'
 
     parser = argparse.ArgumentParser()
     # Parse arguments
@@ -17,7 +13,6 @@ def main():
     parser.add_argument('song', type=str)
     parser.add_argument('-o', '--original', action='store_true', help='Get only original text')
     parser.add_argument('-t', '--translate', action='store_true', help='Get only translate text')
-    parser.add_argument('-c', '--color', action='store_true', help='Get colored lyrics')
     args = parser.parse_args()
 
     # processing user input, replacing spaces in words with underscores
@@ -46,8 +41,6 @@ def main():
                 print(original_text[i].text)
             elif args.translate:
                 print(translate_text[i].text)
-            elif args.color:
-                print(RESET + original_text[i].text + ' — ' + GRAY + translate_text[i].text)
             else:
                 print(original_text[i].text + ' — ' + translate_text[i].text)
     
