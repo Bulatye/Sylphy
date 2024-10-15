@@ -7,7 +7,10 @@ import re
     
 def main():
 
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+            prog='Sylphy',
+            description='This script fetches song lyrics and their translations in russian from [Amalgama Lab](https://www.amalgama-lab.com/).'
+    )
     # Parse arguments
     parser.add_argument('artist', type=str)
     parser.add_argument('song', type=str)
